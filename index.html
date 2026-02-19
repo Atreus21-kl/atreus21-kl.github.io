@@ -3,7 +3,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Blog</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">  </head><link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
   <body>
 
     <!-- Header -->
@@ -14,20 +16,28 @@
 
     <!-- Navigation -->
     <nav>
-      <div class="recherche">
-  <input type="text" id="searchInput" placeholder="🔍 Rechercher un article..." onkeyup="rechercherArticle()">
-</div>
-
       <a href="#">Accueil</a>
       <a href="#">À propos</a>
       <a href="#">Contact</a>
     </nav>
 
+    <!-- Section Hero -->
+    <section class="hero">
+      <img src="votre-photo.jpg" alt="Ma photo" class="hero-photo">
+      <h2>Bonjour, je m'appelle Marie 🌿</h2>
+      <p>Bienvenue sur mon blog lifestyle ! Ici je partage mes conseils bien-être, mes découvertes du quotidien et mes réflexions sur une vie plus douce et équilibrée.</p>
+    </section>
+
+    <!-- Recherche -->
+    <div class="recherche">
+      <input type="text" id="searchInput" placeholder="🔍 Rechercher un article..." onkeyup="rechercherArticle()">
+    </div>
+
     <!-- Articles -->
     <main>
 
       <article>
-         <img src="image1.jpg" alt="Image article 1" class="article-img">
+        <img src="image1.jpg" alt="Image article 1" class="article-img">
         <h2>Mon premier article</h2>
         <p class="date">18 février 2026</p>
         <p>Voici l'introduction de mon premier article. On peut y écrire quelques lignes pour donner envie au lecteur de lire la suite...</p>
@@ -47,17 +57,20 @@
     <footer>
       <p>© 2026 Mon Blog — Créé avec ❤️</p>
     </footer>
-<script>
-  function rechercherArticle() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const articles = document.querySelectorAll('article');
 
-    articles.forEach(article => {
-      const texte = article.innerText.toLowerCase();
-      article.style.display = texte.includes(input) ? 'block' : 'none';
-    });
-  }
-</script>
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnHaut">↑</button>
+    <script>
+      function rechercherArticle() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const articles = document.querySelectorAll('article');
+
+        articles.forEach(article => {
+          const texte = article.innerText.toLowerCase();
+          article.style.display = texte.includes(input) ? 'block' : 'none';
+        });
+      }
+    </script>
+
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnHaut">↑</button>
+
   </body>
 </html>
