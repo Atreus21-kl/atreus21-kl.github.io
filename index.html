@@ -2,29 +2,30 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Blog</title>
-<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <title>Là où les dés se rencontrent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
     <!-- Header -->
     <header>
-      <h1>Mon Blog</h1>
-      <p>Mes pensées, mes aventures, mes découvertes</p>
+      <h1>Là où les dés se rencontrent</h1>
+      <p>Quand le jeu de rôle devient miroir de la vie</p>
     </header>
 
     <!-- Navigation -->
     <nav>
-      <a href="#">Accueil</a>
+      <a href="index.html">Accueil</a>
       <a href="#">À propos</a>
       <a href="#">Contact</a>
     </nav>
 
     <!-- Section Hero -->
     <section class="hero">
-      <img src="image2.jpg" alt="Ma photo" class="hero-photo">
-      <h2>Bonjour, je m'appelle Kael 🌿</h2>
-      <p>Bienvenue sur mon blog lifestyle ! Ici je partage mes conseils bien-être, mes découvertes du quotidien et mes réflexions sur une vie plus douce et équilibrée.</p>
+      <img src="photo.jpg" alt="Atreus21" class="hero-photo">
+      <h2>Bienvenue, aventurier 🎲</h2>
+      <p>Ce blog est le prolongement d'un projet podcast né d'une passion commune pour le jeu de rôle. Ici, j'explore et introduis les idées qui gravitent autour de notre création, entre récits d'aventures, réflexions sur le JDR et ce qu'il révèle de nous-mêmes.</p>
     </section>
 
     <!-- Recherche -->
@@ -36,32 +37,24 @@
     <main>
 
       <article>
-        <img src="image2.jpg" alt="Image article 1" class="article-img">
-        <h2>Mon premier article</h2>
-        <p class="date">18 février 2026</p>
-        <p>Voici l'introduction de mon premier article. On peut y écrire quelques lignes pour donner envie au lecteur de lire la suite...</p>
+        <img src="image1.jpg" alt="Episode Zéro" class="article-img">
+        <h2>Épisode Zéro — Le commencement de l'aventure</h2>
+        <p class="date">23 février 2026</p>
+        <p>Tout commence par une table, des dés et des imaginaires qui se rencontrent. Notre podcast est né d'une envie simple mais profonde : explorer de façon intime les expériences que nous procure le jeu de rôle, et comment elles font écho à la vie elle-même. Voici l'histoire de notre épisode zéro...</p>
         <a href="article1.html" class="lire-plus">Lire la suite →</a>
-      </article>
-
-      <article>
-        <h2>Mon deuxième article</h2>
-        <p class="date">15 février 2026</p>
-        <p>Voici l'introduction de mon deuxième article. On peut y écrire quelques lignes pour donner envie au lecteur de lire la suite...</p>
-        <a href="article2.html" class="lire-plus">Lire la suite →</a>
       </article>
 
     </main>
 
     <!-- Footer -->
     <footer>
-      <p>© 2026 Mon Blog — Créé avec ❤️</p>
+      <p>© 2026 Là où les dés se rencontrent — Par Atreus21 ⚔️</p>
     </footer>
 
     <script>
       function rechercherArticle() {
         const input = document.getElementById('searchInput').value.toLowerCase();
         const articles = document.querySelectorAll('article');
-
         articles.forEach(article => {
           const texte = article.innerText.toLowerCase();
           article.style.display = texte.includes(input) ? 'block' : 'none';
